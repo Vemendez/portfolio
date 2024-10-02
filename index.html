@@ -7,18 +7,19 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        body {
-    position: relative;
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1.6;
-    color: #333;
+    body {
+        position: relative;
+        font-family: 'Open Sans', sans-serif;
+        line-height: 1.6;
+        color: #f1f1f1; /* Lighter text for dark mode */
+        background-color: #121212; /* Dark background */
     }
     .about-section, .projects-section, .skills-section, .contact-section {
         padding: 50px 0;
     }
     .about-section {
         text-align: center;
-        background-color: #f8f9fa;
+        background-color: #1e1e1e; /* Dark background */
         padding: 70px 0;
     }
     .about-section img {
@@ -31,10 +32,11 @@
     .about-section h2 {
         font-size: 2.5rem;
         margin-bottom: 20px;
+        color: #ffffff; /* Lighter heading text */
     }
     .about-section p {
         font-size: 1rem;
-        color: #555;
+        color: #cccccc; /* Slightly lighter text */
         max-width: 700px;
         margin: 0 auto 20px;
     }
@@ -43,29 +45,30 @@
         font-size: 2.5rem;
         margin-bottom: 50px;
         font-weight: 600;
+        color: #ffffff; /* Lighter heading text */
     }
     .card {
         margin-bottom: 30px;
         transition: transform 0.3s;
+        background-color: #2b2b2b; /* Dark card background */
+        border: none; /* Remove border */
     }
     .card:hover {
         transform: translateY(-5px);
     }
+    .card-body {
+        color: #f1f1f1; /* Lighter text for card body */
+    }
     .skills-section {
-        background-color: #f8f9fa;
+        background-color: #1e1e1e; /* Dark background */
     }
     .skill {
         text-align: center;
         margin-bottom: 30px;
     }
-    .skill img {
-        width: 100px;
-        height: 100px;
-        object-fit: cover;
-        margin-bottom: 10px;
-    }
     .skill h5 {
         font-size: 1.25rem;
+        color: #f1f1f1; /* Lighter text */
     }
     .contact-icons {
         text-align: center;
@@ -75,6 +78,7 @@
         height: 50px;
         margin: 0 15px;
         transition: transform 0.3s;
+        filter: invert(1); /* Invert colors to fit dark mode */
     }
     .contact-icons img:hover, .contact-icons svg:hover {
         transform: scale(1.1);
@@ -84,8 +88,11 @@
         position: sticky;
         top: 0;
         z-index: 1000;
-        background-color: #fff;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        background-color: #1e1e1e; /* Dark background */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    }
+    .navbar-brand, .nav-link {
+        color: #f1f1f1 !important; /* Light navigation text */
     }
     .container {
         max-width: 1200px;
@@ -93,24 +100,18 @@
     .project-card a.card-title {
         font-weight: bold;
         font-size: 1.2rem;
-        color: #007bff;
-    }
-    .project-card p.card-text {
-        text-align: left;
-    }
-    .project-card ul {
-        text-align: left;
-        padding-left: 20px;
-    }
-    .project-card ul li {
-        margin-bottom: 10px;
+        color: #00aaff; /* Bright color for links */
     }
     footer {
-        background-color: #f8f9fa;
+        background-color: #1e1e1e; /* Dark footer background */
         padding: 20px 0;
         text-align: center;
+        color: #f1f1f1; /* Light footer text */
     }
-    </style>
+    footer a {
+        color: #00aaff; /* Bright color for links in footer */
+    }
+</style>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
 
