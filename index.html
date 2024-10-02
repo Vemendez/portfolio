@@ -13,6 +13,12 @@
         line-height: 1.6;
         color: #f1f1f1; /* Lighter text for dark mode */
         background-color: #121212; /* Dark background */
+    }   
+    a {
+        color: #00cc99; /* Change to a teal color that fits the dark mode */
+    }
+    a:hover {
+        color: #66ffe0; /* Slightly lighter shade for hover effect */
     }
     .about-section, .projects-section, .skills-section, .contact-section {
         padding: 50px 0;
@@ -67,6 +73,7 @@
         height: 100px;
         object-fit: cover;
         margin-bottom: 10px;
+        filter: invert(1); /* Invert colors to fit dark mode */
     }
     .skill {
         text-align: center;
