@@ -3,171 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Website</title>
+    <title>Enhanced Portfolio</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@300&display=swap" rel="stylesheet">
     <style>
-    body {
-        position: relative;
-        font-family: 'Open Sans', sans-serif;
-        line-height: 1.6;
-        color: #f1f1f1; /* Lighter text for dark mode */
-        background-color: #121212; /* Dark background */
-    }   
-    a {
-        color: #00cc99; /* Change to a teal color that fits the dark mode */
-    }
-    a:hover {
-        color: #66ffe0; /* Slightly lighter shade for hover effect */
-    }
-    .about-section, .projects-section, .skills-section, .contact-section {
-        padding: 50px 0;
-    }
-    .about-section {
-        text-align: center;
-        background-color: #1e1e1e; /* Dark background */
-        padding: 70px 0;
-    }
-    .about-section img {
-        border-radius: 13%;
-        width: 180px;
-        height: 200px;
-        object-fit: cover;
-        margin-bottom: 22px;
-    }
-    .about-section h2 {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-        color: #ffffff; /* Lighter heading text */
-    }
-    .about-section p {
-        font-size: 1rem;
-        color: #cccccc; /* Slightly lighter text */
-        max-width: 700px;
-        margin: 0 auto 20px;
-    }
-    .projects-section h2, .skills-section h2, .contact-section h2 {
-        text-align: center;
-        font-size: 2.5rem;
-        margin-bottom: 50px;
-        font-weight: 600;
-        color: #ffffff; /* Lighter heading text */
-    }
-    .card {
-        margin-bottom: 30px;
-        transition: transform 0.3s;
-        background-color: #2b2b2b; /* Dark card background */
-        border: none; /* Remove border */
-    }
-    .card:hover {
-        transform: translateY(-5px);
-    }
-    .card-body {
-        color: #f1f1f1; /* Lighter text for card body */
-    }
-    .skills-section {
-        background-color: #1e1e1e; /* Dark background */
-    }
-    .skill img {
-        width: 100px;
-        height: 100px;
-        object-fit: cover;
-        margin-bottom: 10px;
-        filter: invert(1); /* Invert colors to fit dark mode */
-    }
-    .skill {
-        text-align: center;
-        margin-bottom: 30px;
-    }
-    .skill h5 {
-        font-size: 1.25rem;
-        color: #f1f1f1; /* Lighter text */
-    }
-    .contact-icons {
-        text-align: center;
-    }
-    .contact-icons img, .contact-icons svg {
-        width: 50px;
-        height: 50px;
-        margin: 0 15px;
-        transition: transform 0.3s;
-        filter: invert(1); /* Invert colors to fit dark mode */
-    }
-    .contact-icons img:hover, .contact-icons svg:hover {
-        transform: scale(1.1);
-    }
-    .navbar {
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        background-color: #1e1e1e; /* Dark background */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-    }
-    .navbar-brand, .nav-link {
-        color: #f1f1f1 !important; /* Light navigation text */
-    }
-    .container {
-        max-width: 1200px;
-    }
-    .project-card a.card-title {
-        font-weight: bold;
-        font-size: 1.2rem;
-        color: #00aaff; /* Bright color for links */
-    }
-    footer {
-        background-color: #1e1e1e; /* Dark footer background */
-        padding: 20px 0;
-        text-align: center;
-        color: #f1f1f1; /* Light footer text */
-    }
-    .project-card p.card-text {
-        text-align: left;
-    }
-    .project-card ul {
-        text-align: left;
-        padding-left: 20px;
-    }
-    .project-card ul li {
-        margin-bottom: 10px;
-    }
-    footer a {
-        color: #00aaff; /* Bright color for links in footer */
-    }
-
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-        background-color: rgba(0, 0, 0, 0.75); /* Dark background */
-        border-radius: 50%; /* Optional: Rounded controls */
-        width: 40px; /* Adjust size */
-        height: 40px;
-    }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to bottom, #121212, #1e1e1e);
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            color: #00cc99;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #66ffe0;
+        }
+        .navbar {
+            background-color: #1c1c1c;
+            padding: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        }
+        .navbar-brand, .nav-link {
+            color: #e0e0e0 !important;
+        }
+        .nav-link:hover {
+            color: #00cc99 !important;
+        }
         
-</style>
-</head>
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
+        .about-section {
+            padding: 100px 20px;
+            background-color: #1e1e1e;
+            color: #e0e0e0; /* Light text color */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap; /* Ensures responsiveness */
+        }
 
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
+        .about-image {
+            margin-right: 50px; /* Add space between the image and the text */
+            margin-bottom: 50px;
+        }
+
+        .about-image img {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow */
+            border-radius: 13%; /* Slightly rounded image */
+            transition: transform 0.3s ease; /* Smooth transition */
+            width: 200px; /* Set image width */
+            height: auto; /* Maintain aspect ratio */
+            
+        }
+
+        .about-image img:hover {
+            transform: scale(1.05); /* Slight zoom on hover */
+        }
+
+        .about-text {
+            max-width: 860px; /* Restrict width for readability */
+        }
+
+        .about-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .about-section p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .about-text a {
+            color: #00cc99; /* Link color */
+            text-decoration: none;
+        }
+
+        .about-text a:hover {
+            color: #66ffe0; /* Lighter color on hover */
+            text-decoration: underline;
+        }
+        
+        .projects-section {
+            padding: 80px 20px;
+        }
+        .projects-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
+        
+        .project-card {
+            margin: 4px;
+        }
+
+        .card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            background-color: #2b2b2b;
+            border: none;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+        }
+        .skills-section {
+            background-color: #1e1e1e;
+            padding: 80px 20px;
+        }
+        .skills-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+        .skill {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .skill img {
+            width: 100px;
+            height: 100px;
+            filter: invert(1);
+            transition: transform 0.3s;
+        }
+        .skill img:hover {
+            transform: scale(1.2);
+        }
+        .contact-section {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #1c1c1c;
+        }
+        .contact-icons a {
+            margin: 0 15px;
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+     
+        .contact-icons img, .contact-icons svg {
+            width: 50px;
+            height: 50px;
+            margin: 10px 15px;
+            transition: transform 0.3s;
+            filter: invert(1); /* Invert colors to fit dark mode */
+        }
+     
+        .contact-icons a:hover {
+            transform: scale(1.2);
+        }
+        footer {
+            background-color: #1e1e1e;
+            text-align: center;
+            padding: 20px 0;
+            color: #e0e0e0;
+        }
+        
+        footer a {
+            color: #00aaff; /* Bright color for links in footer */
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
             <a class="navbar-brand" href="#">Portfolio</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     <li class="nav-item">
                         <a class="nav-link" href="images/about/resume_victor_mendez.pdf">Resume</a>
                     </li>
@@ -176,24 +187,39 @@
         </div>
     </nav>
 
-    <div class="container">
-        <!-- About Section -->
-        <!-- About Section -->
     <section id="about" class="about-section">
-    <h2>About</h2>
-    <img src="images/about/1.jpeg" alt="Profile Picture">
-    <p>Victor Eduardo Mendez is a Business Analyst with over six years of experience in business intelligence and data analytics within the banking industry. Based in Chicago, IL, with an MBA in Finance from Loyola University Chicago and a Bachelor's degree in Computer Engineering from Universidad Iberoamericana (UNIBE).</p>
-    <p>Proficient in Python, SQL, Power BI, Tableau, and Excel, with a strong background at Banco Vimenca, where the focus was on improving data collection, developing dashboards, and optimizing asset and liability management. Dedicated to leveraging data-driven strategies to support business goals and enhance decision-making processes.</p>
-    <p>Known for strong communication and project management skills, and a proven track record of leading teams to produce BI reports that drive operational cost reductions and process improvements. Passionate about continuous learning and data science, as evidenced by certifications in Business Data Analytics and Data Science.</p>
-    <p>Feel free to explore the <a href="#projects">projects</a> and skills, and don't hesitate to <a href="#contact">get in touch</a> to discuss potential collaborations.</p>
-    <p>You can also <a href="images/about/resume_victor_mendez.pdf" target="_blank">check my resume</a> for a more detailed overview of my professional experience.</p>
+        <div class="container d-flex align-items-center flex-wrap">
+            <!-- Profile Picture -->
+            <div class="about-image me-5">
+                <img src="images/about/1.jpeg"  alt="Victor Mendez" width="200">
+            </div>
+            <!-- About Text -->
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>
+                    Victor Eduardo Mendez is a Business Analyst with over six years of experience in business intelligence 
+                    and data analytics within the banking industry. Based in Chicago, IL, with an MBA in Finance from 
+                    Loyola University Chicago and a Bachelor's degree in Computer Engineering from Universidad Iberoamericana (UNIBE).
+                </p>
+                <p>
+                    Proficient in Python, SQL, Power BI, Tableau, and Excel, with a strong background in data-driven 
+                    decision-making processes to support business goals and enhance operational efficiency.
+                </p>
+                <p>
+                    Passionate about continuous learning and data science, as evidenced by certifications in Business Data Analytics and Data Science.
+                </p>
+                <p>
+                    Feel free to explore the <a href="#projects">projects</a> and skills, and don't hesitate to <a href="#contact">get in touch</a> to discuss potential collaborations. 
+                    You can also <a href="images/about/resume_victor_mendez.pdf" target="_blank">check my resume</a> for a more detailed overview of my professional experience.
+                </p>
+            </div>
+        </div>
     </section>
+    
 
-
-
-        <!-- Projects Section -->
-        <section id="projects" class="projects-section">
-            <h2>Projects</h2>
+    <section id="projects" class="projects-section">
+        <h2>Projects</h2>
+        <div class="container">
             <div class="row">
                 <div class="col-md-12 project-card">
                     <div class="card">
@@ -253,14 +279,15 @@
                                 <div class="card-body">
                                     <h5 class="card-title"><a href="https://public.tableau.com/app/profile/eduardo.mendez7180/viz/NVIDIA_FIN_ANALYSIS/Overview" download>Financial Analysis & Valuation Project 📈</a></h5>
                                     <p class="card-text">
-                                        Financial Analysis & Valuation of NVIDIA (NVDA) 💹 Using Tableau for Data Visualization and <a href="https://github.com/Vemendez/NVIDIA_FIN_ANALYSIS">Python</a> for Data Extrection and Analysis. The analysis had the next Key Highlights:
+                                        Conducted a financial analysis and valuation of NVIDIA (NVDA) 💹 using Tableau for Data Visualization and 
+                                        <a href="https://github.com/Vemendez/NVIDIA_FIN_ANALYSIS">Python</a> for data analysis. Key highlights:
                                         <ul>
-                                            <li>Estimated the intrinsic value per share using projected Free Cash Flows and a carefully selected Terminal Growth Rate. The results provided insight into the potential undervaluation/overvaluation of the stock.</li>
-                                            <li>Explored how changes in key assumptions like WACC (ranging from 11.5% to 15.5%) and Terminal Growth Rate (1% to 3%) impact the intrinsic value. This analysis underscored the importance of these assumptions in driving valuation outcomes.</li>
-                                            <li>The Value at Risk (VaR) analysis revealed potential downside risks, with a 95% VaR of -2.79% and a 99% VaR of -4.53%, highlighting moderate volatility and the possibility of significant negative returns during market downturns.</li>
+                                            <li>Estimated the intrinsic value per share using Free Cash Flows and a Terminal Growth Rate.</li>
+                                            <li>Analyzed the impact of WACC and Terminal Growth Rate variations on valuation.</li>
+                                            <li>Performed Value at Risk (VaR) analysis, revealing moderate volatility and downside risks.</li>
                                         </ul>
-                                    🔍 Key Takeaway: This project not only provided a deeper understanding of NVIDIA’s financial performance but also showcased the importance of robust valuation models and risk assessments for making informed investment decisions.
-                                    </p>
+                                        🔍 <strong>Key Takeaway:</strong> Gained insights into NVIDIA’s financial performance and demonstrated the importance of robust valuation models for informed investment decisions.
+                                    </p>                                    
                                 </div>
                             </div>
                         </div>
@@ -302,14 +329,14 @@
                                 <div class="card-body">
                                     <h5 class="card-title"><a href="images/projects/Dominican%20Republic%20and%20World%20Economy.pbix" download>Economic Indicators Dashboard (Power BI)</a></h5>
                                     <p class="card-text">
-                                        This project showcases a comprehensive Power BI dashboard that visualizes key economic indicators for the Dominican Republic, the US market, and the global economy. The dashboard includes various visualizations:
+                                        Developed a Power BI dashboard to visualize key economic indicators for the Dominican Republic, the US market, and the global economy. Key visualizations include:
                                         <ul>
-                                            <li>Inflation rates and GDP growth over time, highlighting the economic health and performance of the Dominican Republic.</li>
-                                            <li>Public debt levels and foreign exchange reserves, providing a perspective on the financial stability and external position of the country.</li>
-                                            <li>US market indices such as the NASDAQ Composite, S&P 500, and Dow Jones Industrial Average, along with US Treasury bond yields.</li>
-                                            <li>Economic growth rates of different regions including the Dominican Republic, the United States, Latin America, and the Eurozone</li>
+                                            <li>Inflation rates and GDP growth trends for the Dominican Republic.</li>
+                                            <li>Public debt levels and foreign exchange reserves.</li>
+                                            <li>US market indices such as NASDAQ, S&P 500, and Dow Jones, along with Treasury bond yields.</li>
+                                            <li>Economic growth rates across the Dominican Republic, US, Latin America, and the Eurozone.</li>
                                         </ul>
-                                    </p>
+                                    </p>                                    
                                 </div>
                             </div>
                         </div>
@@ -327,14 +354,14 @@
                                 <div class="card-body">
                                     <h5 class="card-title"><a href="images/projects/universal_top_spotify_songs%20-%20Eduardo%20Mendez.xlsx" download>Analysis of Spotify Top Songs (Excel)</a></h5>
                                     <p class="card-text">
-                                        This project analyzes the top Spotify songs across 73 countries, focusing on various aspects such as popularity, explicit content, and key audio features. Using data from Kaggle, the analysis provides insights into the following:
+                                        Analyzed Spotify's top songs across 73 countries using Kaggle data, focusing on popularity, explicit content, and audio features. Key insights include:
                                         <ul>
-                                            <li>The percentage of explicit songs and their average popularity in different countries, with a detailed focus on the Dominican Republic.</li>
-                                            <li>Evaluation of the average popularity of songs, distinguishing between explicit and non-explicit content.</li>
-                                            <li>Analysis of key audio features like energy, tempo, and loudness, comparing explicit and non-explicit songs.</li>
-                                            <li>Visualization of global trends in song popularity and explicit content, using pivot tables and charts for comprehensive insights.</li>
+                                            <li>Percentage of explicit songs and their average popularity, with a focus on the Dominican Republic.</li>
+                                            <li>Comparison of popularity between explicit and non-explicit songs.</li>
+                                            <li>Analysis of audio features such as energy, tempo, and loudness.</li>
+                                            <li>Global trends in song popularity and explicit content visualized through charts and pivot tables.</li>
                                         </ul>
-                                    </p>
+                                    </p>                                    
                                 </div>
                             </div>
                         </div>
@@ -346,11 +373,12 @@
         <!-- Skills Section -->
         <section id="skills" class="skills-section">
             <h2>Skills</h2>
-            <div class="row">
-                <div class="col-md-3 skill">
-                    <img src="images/icons/sql.png" alt="SQL">
-                    <h5>SQL</h5>
-                </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 skill">
+                        <img src="images/icons/sql.png" alt="SQL">
+                        <h5>SQL</h5>
+                    </div>
                 <div class="col-md-3 skill">
                     <img src="images/icons/r.png" alt="R">
                     <h5>R</h5>
@@ -429,7 +457,7 @@
                 </a>
             </div>
 
-        <p class="pt-3">&copy; 2024 Victor Mendez. All rights reserved.</p>
+        <p>&copy; 2024 Victor Mendez. All rights reserved.</p>
         </footer>    
             
         </section>
