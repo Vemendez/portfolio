@@ -131,6 +131,26 @@
         .skill img:hover {
             transform: scale(1.2);
         }
+
+        /* Media Query for Mobile Devices */
+        @media (max-width: 768px) {
+            .skill img {
+                width: 40px; /* Make the icons smaller */
+                height: 40px;
+            }
+
+            .skills-section .container .row {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .skill {
+                flex: 1 1 calc(33.33% - 10px); /* Adjust layout to fit 3 icons per row */
+                margin: 10px;
+            }
+        }
+        
         .contact-section {
             text-align: center;
             padding: 40px 20px;
